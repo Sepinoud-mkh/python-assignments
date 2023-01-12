@@ -1,0 +1,13 @@
+n=int(input())
+fibonachi=[]
+a=1
+b=1
+fibonachi.append(a)
+fibonachi.append(b)
+while(n!=0):
+    c=a+b
+    fibonachi.append(c)
+    a=b
+    b=c
+    n=n-1
+print(fibonachi)
