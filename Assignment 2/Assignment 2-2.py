@@ -28,4 +28,4 @@ while(player_Score!=5 and computer_Score!=5):
 if player_Score>computer_Score:
     print("Congratulations,%s you won!!!"%name)
 else:
-    print("Unfortunatelly you lost :((\n")
+    print("Unfortunatelly you lost :((")
