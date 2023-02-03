@@ -1,3 +1,3 @@
-array = list(map(str,input().split()))
+array = list(input().split(","))
 print(array)
-print(str(array[len(array)::-1]))
+print(array[len(array)::-1])
