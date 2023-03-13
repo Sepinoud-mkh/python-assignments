@@ -1,3 +1,9 @@
+import pyfiglet
+
+
+
+
+
 def show():
     for row in game_board:
         for cell in row:
@@ -5,6 +11,10 @@ def show():
         print()
 
 
+title = pyfiglet.figlet_format("TicTacToe",font="bubble")
+
+Player_1 = input("Please enter your name:")
+Player_2 = input("Please enter your name:")
 
 
 game_board = [["-", "-", "-"],
@@ -14,7 +24,7 @@ game_board = [["-", "-", "-"],
 show()
 
 while True:
-    print("Player 1")
+    print("%s,it's your turn"%Player_1)
     
     while True:
         row = int(input("Enetr the desired number of row:"))
@@ -31,7 +41,7 @@ while True:
 
     show()
 
-    print("Player 2")
+    print("%s,it's your turn"%Player 2)
 
     while True:
         row = int(input("Enetr the desired number of row:"))
