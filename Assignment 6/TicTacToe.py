@@ -4,26 +4,47 @@ def show():
             print(cell,end=" ")
         print()
 
+
+
+
 game_board = [["-", "-", "-"],
               ["-", "-", "-"],
               ["-", "-", "-"]]
 
 show()
 
-print("Player 1")
+while True:
+    print("Player 1")
 
-row = int(input("Enetr the desired number of row:"))
-col = int(input("Enetr the desired number of col:"))
+    row = int(input("Enetr the desired number of row:"))
+    col = int(input("Enetr the desired number of col:"))
 
-game_board[row][col]="X"
+    while True:
+        if 0<=row<=2 and 0<=col<=2:
+            if game_board[row][col] == "-":
+                game_board[row][col] ="X"
+                break
+            else:
+                print("The desired place in full,please select another cell")
+        else:
+            print("Out of specified raneg,selet between 0 and 2")
 
-show()
+    show()
 
-print("Player 2")
+    print("Player 2")
 
-row = int(input("Enetr the desired number of row:"))
-col = int(input("Enetr the desired number of col:"))
+    row = int(input("Enetr the desired number of row:"))
+    col = int(input("Enetr the desired number of col:"))
 
-game_board[row][col]="O"
+    while True:
 
-show()
+        if 0<=row<=2 and 0<=col<=2:
+            if game_board[row][col] == "-":
+                game_board[row][col] = "O"
+                break
+            else:
+                print("The desired place in full,please select another cell")
+        else:
+            print("Out of specified raneg,selet between 0 and 2")
+
+    show()
