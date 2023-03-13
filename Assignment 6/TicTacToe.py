@@ -15,11 +15,11 @@ show()
 
 while True:
     print("Player 1")
-
-    row = int(input("Enetr the desired number of row:"))
-    col = int(input("Enetr the desired number of col:"))
-
+    
     while True:
+        row = int(input("Enetr the desired number of row:"))
+        col = int(input("Enetr the desired number of col:"))
+
         if 0<=row<=2 and 0<=col<=2:
             if game_board[row][col] == "-":
                 game_board[row][col] ="X"
@@ -33,11 +33,10 @@ while True:
 
     print("Player 2")
 
-    row = int(input("Enetr the desired number of row:"))
-    col = int(input("Enetr the desired number of col:"))
-
     while True:
-
+        row = int(input("Enetr the desired number of row:"))
+        col = int(input("Enetr the desired number of col:"))
+        
         if 0<=row<=2 and 0<=col<=2:
             if game_board[row][col] == "-":
                 game_board[row][col] = "O"
