@@ -2,7 +2,7 @@ def show():
     for row in game_board:
         for cell in row:
             print(cell,end=" ")
-    print()
+        print()
 
 game_board = [["-", "-", "-"],
               ["-", "-", "-"],
