@@ -1,4 +1,9 @@
 import pyfiglet
+import random
+
+
+computer_Or_Player=int(input("Do you want to play with computer or with a player?\nif you want to play with computer please enter 1,if not please enter 2:"))
+
 
 def show():
     for row in game_board:
@@ -17,7 +22,11 @@ def check_game():
 title = pyfiglet.figlet_format("TicTacToe",font="bubble")
 
 Player_1 = input("Please enter your name:")
-Player_2 = input("Please enter your name:")
+
+if computer_Or_Player==2:
+    Player_2 = input("Please enter your name:")
+else:
+    Player_2 = "computer"
 
 
 game_board = [["-", "-", "-"],
@@ -44,12 +53,16 @@ while True:
 
     show()
 
-    print("%s,it's your turn"%Player 2)
+    print("%s,it's your turn"%Player_2)
 
     while True:
-        row = int(input("Enetr the desired number of row:"))
-        col = int(input("Enetr the desired number of col:"))
-        
+        if computer_Or_Player==2:
+            row = int(input("Enetr the desired number of row:"))
+            col = int(input("Enetr the desired number of col:"))
+        else:
+            row=random.randint(0,2)
+            col=random.randint(0,2)
+
         if 0<=row<=2 and 0<=col<=2:
             if game_board[row][col] == "-":
                 game_board[row][col] = "O"
