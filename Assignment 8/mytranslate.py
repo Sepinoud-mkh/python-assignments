@@ -3,7 +3,7 @@ def readDatabase():
     global dictionaryWords
 
     data=open("translate.txt")
-    info=data.read().split(",")
+    info=data.read().split("\n")
     
     dictionaryWords=[]
     for i in range(0,len(info),2):
