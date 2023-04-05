@@ -13,7 +13,7 @@ def readDatabase():
     data.close()
 
 def showMenu():
-    print("Here is the menu!!\n")
+    print("\nHere is the menu!!\n")
     print("1.Translate")
     print("2-Add new words")
     print("3-Exit")
@@ -30,7 +30,7 @@ def translate(text,wantedLanguage):
                     break
             else:
                 translation=translation+userWord+" "
-        print(translation)
+        print("The translation is:%s"%translation)
     
     elif wantedLanguage=="english" or wantedLanguage=="English":
         userWords=text.split(" ")
@@ -42,15 +42,15 @@ def translate(text,wantedLanguage):
             else:
                 translation=translation+userWord+" "
 
-        print(translation)
+        print("The translation is:%s"%translation)
 
 readDatabase()
 while True:
     showMenu()
-    choice=int(input())
+    choice=int(input("Please enter your choice:"))
     if choice==1:
-        userText=input("Text:")
-        userLanguage=input("Language:")
+        userText=input("Please enter your Text:")
+        userLanguage=input("Please enter the Language that you want your text to be translated into:")
         translate(userText,userLanguage)
     elif choice==2:
         ...
