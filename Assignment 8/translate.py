@@ -20,6 +20,12 @@ def showMenu():
     print("3-Add new words")
     print("4-Exit")
 
+def writeToDatabase():
+    userNewWordEN=input("Enter the word in english:")
+    userNewWordPer=input("Enter the word in persian:")
+    newDict={"English":userNewWordEN,"Persian":userNewWordPer}
+    dictWords.append(newDict)
+
 def English_to_Persian():
     userText=input("please enter your english text:")
     userWords=userText.split(" ")
@@ -61,6 +67,6 @@ while True:
     elif choice==2:
         Persian_to_English()
     elif choice==3:
-        ...
+        writeToDatabase()
     elif choice==4:
         exit(0)

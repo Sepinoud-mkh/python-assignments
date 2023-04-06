@@ -44,6 +44,12 @@ def translate(text,wantedLanguage):
 
         print("The translation is:%s"%translation)
 
+def writeToDatabase():
+    userNewWordEN=input("Enter the word in english:")
+    userNewWordPer=input("Enter the word in persian:")
+    newDict={"English":userNewWordEN,"Persian":userNewWordPer}
+    dictionaryWords.append(newDict)
+
 readDatabase()
 while True:
     showMenu()
@@ -53,7 +59,7 @@ while True:
         userLanguage=input("Please enter the Language that you want your text to be translated into:")
         translate(userText,userLanguage)
     elif choice==2:
-        ...
+        writeToDatabase()
     elif choice==3:
         exit(0)
 
