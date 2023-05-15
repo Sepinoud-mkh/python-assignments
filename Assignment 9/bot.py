@@ -88,7 +88,7 @@ def voice_maker(message):
 @bot.message_handler(commands= ["max"])
 def max(message):
     global bot_state
-    user_numbers = bot.send_message(message.chat.id, "give me your numbers devided by commas")
+    user_numbers = bot.send_message(message.chat.id, "Write a list of numbers devided by commas")
     bot.register_next_step_handler(user_numbers, max_finder)
 
 def max_finder(message):
