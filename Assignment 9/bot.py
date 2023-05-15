@@ -80,7 +80,7 @@ def voice(message):
     bot.register_next_step_handler(user_txt, voice_maker)
 
 def voice_maker(message):
-    audio = gTTS(text = message.text, lang = "En", slow = False)
+    audio = gTTS(text = message.text, lang = "en", slow = False)
     audio.save("audio.mp3")
     audio_file = open("audio.mp3", "rb")
     bot.send_voice(message.chat.id, audio_file)
