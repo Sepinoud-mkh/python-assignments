@@ -10,7 +10,7 @@ bot_state = None
 @bot.message_handler(commands= ["start"])
 def start(message):
     global bot_state
-    bot.reply_to(message, "Welcome 🐳" + message.from_user.first_name)
+    bot.reply_to(message, "Welcome 🐳" + message.from_user.first_name + "Please write \help to see the menu")
 
 
 @bot.message_handler(commands= ["help"])
