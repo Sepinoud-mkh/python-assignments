@@ -10,13 +10,14 @@ bot_state = None
 @bot.message_handler(commands= ["start"])
 def start(message):
     global bot_state
-    bot.reply_to(message, "Welcome🐳" + message.from_user.first_name)
+    bot.reply_to(message, "Welcome 🐳" + message.from_user.first_name)
 
 
 @bot.message_handler(commands= ["help"])
 def help(message):
     global bot_state
-    bot.reply_to(message, """ /start
+    bot.reply_to(message, """ 
+    /start
     Welcome...
     /game
     Play Gussing the number\n
@@ -27,7 +28,7 @@ def help(message):
     /max
     Write a list of numbers devided by commas and the bot will determine the largest one \n
     /argmax 
-    gWrite a list of numbers devided by commas and the bot will determine the index of the largest one \n
+    Write a list of numbers devided by commas and the bot will determine the index of the largest one \n
     /qrcode
     Type your sentence you want to be transformed to a QR code\n
     /help
