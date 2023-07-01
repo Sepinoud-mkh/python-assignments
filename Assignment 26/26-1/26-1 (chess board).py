@@ -1,17 +1,13 @@
 import numpy as np
 import cv2
 
-R = 8 #int(input("enter the number of the rows:"))
-C = 8 #int(input("enter the number of the columns:"))
 
-row = R*60
-column = C*60
+Board = np.zeros((480, 480))
 
-Board = np.zeros((row, column))
 
 #1
-for a in range(60):
-    for k in range(0, 60):
+for a in range(0, 60):
+    for k in range(60):
         Board[a][k] = 255
     for k in range(120,180):
         Board[a][k] = 255
@@ -95,12 +91,6 @@ for a in range(420, 480):
 
 
 cv2.imshow("",Board)
-cv2.imwrite("Chess Board.jpg", Board)
-
-#input = cv2.imread("Chess Board.jpg", cv2.IMREAD_UNCHANGED)
-#output = cv2.resize(input,[500, 500])
-#cv2.imshow("",output)
-
-
+cv2.imwrite("26-1\Chess Board.jpg", Board)
 
 cv2.waitKey()
