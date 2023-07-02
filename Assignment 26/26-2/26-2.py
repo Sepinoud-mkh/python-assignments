@@ -1,18 +1,22 @@
 import cv2
 
-
 image_1 = cv2.imread("1.jpg")
-print(image_1.shape)
-image_2 = cv2.imread("2.jpg")
-print(image_2.shape)
+width_1 = image_1.shape[0]
+height_1 = image_1.shape[1]
+print(width_1, height_1)
 
-for i in range(645):
-    for j in range(645):
+image_2 = cv2.imread("2.jpg")
+width_2 = image_2.shape[0]
+height_2 = image_2.shape[1]
+print(width_2, height_2)
+
+for i in range(width_1):
+    for j in range(height_1):
         image_1[i][j] = 255- image_1[i][j]
 
 
-for i in range(1202):
-    for j in range(900):
+for i in range(width_2):
+    for j in range(height_2):
         image_2[i][j] = 255- image_2[i][j]
 
 
