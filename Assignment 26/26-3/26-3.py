@@ -3,41 +3,23 @@ import cv2
 
 
 image = cv2.imread("3.jpg")
+newImage = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-
-print(image.shape)
-
-width = int(image.shape[0])
-height = int(image.shape[1])
-depth = image.shape[2]
+width, height = newImage.shape
 
 
 
-for i in range(1, width):
+for i in range((width//2)+1):
     for j in range(1, height):
-        for k in range(1, depth):
-            color_Code = image[i][j][k]
-            #print(i, j, k, color_Code, width-i, height-j, depth-k)
-            new_Width = width-i
-            new_Height = height-j
-            new_Depth = depth-k
-
-            image[new_Width][new_Height][new_Depth]
-            #print(image[new_Width][new_Height][new_Depth])
+            
+            color_Code = newImage[i][j]
+            newImage[i][j] = newImage[width-i-1, height-j-1]
+            newImage[width-i-1, height-j-1] = color_Code
+            if (i==width//2 and j==height//2):
+                  break
 
 
-cv2.imshow("", image)
-cv2.imwrite("NEW 3.jpg", image)
-
+cv2.imshow("", newImage)
+cv2.imwrite("NEW 3.jpg", newImage)
 cv2.waitKey()
 
-
-
-
-
-
-
-
-#cv2.imshow("", image)
-
-#cv2.waitKey()
