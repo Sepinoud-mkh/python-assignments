@@ -4,15 +4,13 @@ import random
 
 image = cv2.imread("lonely-japanese-cherry.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-image = cv2.resize(image, (400, 600))
+image = cv2.resize(image, (600, 400))
 
 rows, cols = image.shape
 
 #writer = cv2.VideoWriter('snow.mp4', cv2.VideoWriter_fourcc(*'mpv4'), 10, (cols, rows))
 
 
-t = image[399, 599]
-print(t)
 
 
 
